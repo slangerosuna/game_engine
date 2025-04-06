@@ -1,0 +1,22 @@
+[package]
+name = "peano-engine"
+version = "0.0.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+peano-derive = { path = "../peano-derive" }
+
+[workspace]
+members = [
+    "peano-derive",
+]
+
+[workspace.dependencies]
+bincode = { version = "2.0.1", features = ["serde"] }
+futures = "0.3.31"
+rayon = "1.10.0"
+serde = { version = "1.0.219", features = ["alloc", "derive", "rc", "std"] }
+tokio = { version = "1.44.2", features = ["full"] }
+toml = "0.8.20"
+ron = "0.9.0"
