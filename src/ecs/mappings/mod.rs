@@ -1,5 +1,14 @@
-mod spatial;
-mod table;
+pub mod spatial;
+pub mod table;
 
-pub use spatial::*;
-pub use table::*;
+/**
+ *
+ */
+pub trait Mapping {}
+
+pub trait Query {
+    type Mapping: Mapping;
+    type Out;
+
+    fn query(&self, map: Self::Mapping) -> Self::Out;
+}
