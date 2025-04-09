@@ -15,6 +15,8 @@ serde = { version = "1.0.219", features = ["alloc", "derive", "rc", "std"] }
 tokio = { version = "1.44.2", features = ["full"] }
 toml = "0.8.20"
 ron = "0.10.1"
+egui = "0.31.1"
+egui-wgpu = "0.31.1"
 
 [workspace]
 members = [
